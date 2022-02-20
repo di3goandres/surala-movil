@@ -1,0 +1,64 @@
+<ion-app>
+
+  <ion-split-pane when="xl" contentId="principal">
+
+
+    <!-- <app-menu></app-menu> -->
+    <ion-menu side="start" menuId="authenticated" contentId="principal">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menú Principal</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+
+        <ion-list>
+
+          <ion-menu-toggle autoHide="false" *ngFor="let c of componentes | async">
+            <ion-item [routerLink]="c.redirectTo" class="equal-sized-item">
+              <ion-icon slot="start" size="large" [name]="c.icon" class="ovas"></ion-icon>
+              <ion-label class="blue">{{ c.name }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list>
+
+
+      </ion-content>
+    </ion-menu>
+
+    <ion-menu side="end" menuId="unauthenticated" contentId="principal">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menú Invitados</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+
+          <ion-menu-toggle autoHide="false" *ngFor="let c of componentesInvitado | async">
+            <ion-item [routerLink]="c.redirectTo" class="equal-sized-item_v2">
+              <ion-icon slot="start" [name]="c.icon" class="blue"></ion-icon>
+              <ion-label class="ovas">{{ c.name }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+
+    <ion-router-outlet id="principal">
+
+      <!-- fab placed in the center of the content with a list on each side -->
+
+
+    </ion-router-outlet>
+
+  </ion-split-pane>
+
+
+  <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="large" color="#fff" type="ball-atom" [fullScreen]="true">
+  </ngx-spinner>
+</ion-app>

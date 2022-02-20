@@ -1,0 +1,32 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Foto Finca</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+
+
+    <ion-item *ngIf="photoService.photos.length>0">
+      <ion-img [src]="photoService.photos[0].base64"></ion-img>
+
+    </ion-item>
+    <ion-buttons>
+      <button mat-raised-button (click)="photoService.takePicture()">
+        <ion-icon slot="icon-only" name="camera-outline"></ion-icon>
+      </button>
+
+      <button mat-raised-button (click)="photoService.selectPicture()">
+        <ion-icon slot="icon-only" name="images-outline"></ion-icon>
+    
+      </button>
+
+      <button mat-raised-button  (click)="enviarFoto()">
+        <ion-icon slot="icon-only" name="send-outline"></ion-icon>
+
+      </button>
+
+    </ion-buttons>
+    <ion-label>{{resultado}}</ion-label>
+  </ion-card-content>
+
+</ion-card>

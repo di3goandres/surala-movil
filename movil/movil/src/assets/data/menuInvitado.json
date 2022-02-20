@@ -1,0 +1,21 @@
+[
+  
+    {
+     
+      "icon": "accessibility-outline",
+      "name": "Prefierenos",
+      "redirectTo": "/Preferirnos"
+    },
+    {
+      "icon": "book-outline",
+      "name": "Guia de Manejos",
+      "redirectTo": "/guiasmanejo"
+    },
+    {
+      "icon": "medkit-outline",
+      "name": "Productos",
+      "redirectTo": "/medicamentos"
+    }
+    
+  ]
+  

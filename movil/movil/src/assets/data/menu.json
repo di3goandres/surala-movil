@@ -1,0 +1,40 @@
+[
+    {
+      "icon": "home-outline",
+      "name": "Inicio",
+      "redirectTo": "/home"
+    },
+    {
+      "icon": "images-outline",
+      "name": "Fincas",
+      "redirectTo": "/fincas"
+    },
+    {
+      "icon": "archive-outline",
+      "name": "Despachos",
+      "redirectTo": "/pasarela"
+    },
+    
+    {
+      "icon": "document-attach-outline",
+      "name": "informes Técnicos",
+      "redirectTo": "/ReportesTecnicos"
+    },
+    {
+      "icon": "fish-outline",
+      "name": "Reclamos",
+      "redirectTo": "/tipoReporteMortalidad"
+    },
+    {
+      "icon": "book-outline",
+      "name": "Guia de Manejos",
+      "redirectTo": "/guiasmanejo"
+    },
+    {
+      "icon": "medkit-outline",
+      "name": "Productos",
+      "redirectTo": "/medicamentos"
+    }
+    
+  ]
+  

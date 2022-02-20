@@ -1,0 +1,50 @@
+<app-header titulo="Mis Mensajes" icon="mail"></app-header>
+
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-list-header>
+          <ion-label class="ova">Mis Mensajes </ion-label>
+         
+        </ion-list-header>
+
+        <ion-item-sliding *ngFor="let push of mensajes">
+       
+          <ion-item (click)="presentModal(push)" >
+            <ion-label>
+  
+              <h3 class="ova">
+                {{push.title}}
+              </h3>
+              <p class="blue">
+                {{push.body}}
+              </p>
+            </ion-label>
+            
+            <ion-label slot="end" text-right >
+              <p class="blue" >
+                {{push.FechaCorta}}
+              </p>
+             
+            </ion-label>
+
+          </ion-item>
+
+          <ion-item-options side="end">
+           
+            <ion-item-option color="primary" (click)="borrar(push)">
+                 <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+              
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+
+      </ion-list>
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

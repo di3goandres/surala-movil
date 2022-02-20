@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="danger" (click)="dismiss()">
+        <span ion-text color="primary"></span>
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ova">TRUCHAS SURALA S.A.S.</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+ 
+  <div #aprobado *ngIf="detalle.Estado=='Aprobada'|| detalle.Estado=='No Aprobada'">
+
+  <ion-card>
+   
+ 
+
+    <ion-card-header>
+      <ion-card-subtitle class="ova">{{detalle.Estado|uppercase}}</ion-card-subtitle>
+      <ion-card-title class="blue">Fecha: {{detalle.created_at}}</ion-card-title>
+      <ion-item>
+        <ion-icon name="pin" slot="start" color="primary"></ion-icon>
+        <ion-label>{{detalle.departamento + ','+ detalle.municipio}}</ion-label>
+       
+      </ion-item>
+    </ion-card-header>
+    <ion-card-content>
+   <p> {{detalle.Observaciones}}</p>
+
+  
+   
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+
+
+    <ion-item color="primary">
+      <ion-icon name="checkmark-circle-outline" slot="start" *ngIf="detalle.Estado=='Aprobada'"></ion-icon>
+      <ion-icon slot="start" name="close-circle-outline" *ngIf="detalle.Estado=='No Aprobada'"></ion-icon>
+
+      <ion-label>Aprobado Suralá</ion-label>
+
+      <ion-note slot="end">
+        <ion-button>
+          {{detalle.aprobado_Surala| number}}
+          
+          <ion-icon slot="end" name="checkmark-circle-outline" *ngIf="detalle.Estado=='Aprobada'"></ion-icon>
+          <ion-icon slot="end" name="close-circle-outline" *ngIf="detalle.Estado=='No Aprobada'"></ion-icon>
+        
+        </ion-button>
+      </ion-note>
+    </ion-item>
+
+    <ion-item color="primary">
+      <ion-icon name="checkmark-circle-outline" slot="start" *ngIf="detalle.Estado=='Aprobada'"></ion-icon>
+      <ion-icon slot="start" name="close-circle-outline" *ngIf="detalle.Estado=='No Aprobada'"></ion-icon>
+
+      <ion-label>Aprobado Troutlodge </ion-label>
+
+      <ion-note slot="end">
+        <ion-button>
+          {{detalle.aprobado_Troutlodge| number}}
+          
+          <ion-icon slot="end" name="checkmark-circle-outline" *ngIf="detalle.Estado=='Aprobada'"></ion-icon>
+          <ion-icon slot="end" name="close-circle-outline" *ngIf="detalle.Estado=='No Aprobada'"></ion-icon>
+        
+        </ion-button>
+      </ion-note>
+    </ion-item>
+   
+  </ion-card>
+</div>
+
+<div #pendiente *ngIf="detalle.Estado=='Pendiente'">
+  <ion-card>
+   
+ 
+
+    <ion-card-header>
+      <ion-card-subtitle class="ova">{{detalle.Estado|uppercase}}</ion-card-subtitle>
+      <ion-card-title class="blue">Fecha: {{detalle.created_at}}</ion-card-title>
+      <ion-card-subtitle class="ova">Finca: {{detalle.nombre|uppercase}}</ion-card-subtitle>
+
+      <ion-item>
+        <ion-icon name="pin" slot="start" color="primary"></ion-icon>
+        <ion-label class="ova">{{detalle.departamento + ', '+ detalle.municipio}}</ion-label>
+     
+
+       
+      </ion-item>
+    </ion-card-header>
+    <ion-card-content>
+      <p>El reclamo aun se encuentra en estudio con el comite tecnico.</p>
+
+      <p>Tiempo de respuesta: de 10 a 15 dias</p>
+   
+    </ion-card-content>
+  </ion-card>
+  
+</div>
+<ion-grid>
+  <ion-row style="text-align: center;">
+    <ion-col class="text-center">
+      <ion-button float-center color="primary" (click)="dismiss()">
+        <span ion-text color="primary"></span>
+        <ion-icon name="close-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+</ion-content>

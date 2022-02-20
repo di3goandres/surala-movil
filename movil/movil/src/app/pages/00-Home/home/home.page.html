@@ -1,0 +1,53 @@
+<app-header titulo="Bienvenidos" icon="person"></app-header>
+
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title class="ovas">Bienvenido</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="toggleMenu()">
+        <ion-icon slot="icon-only" name="menu"  color="primary"></ion-icon>
+      </ion-button>
+      <ion-button slot="end">
+
+        <ion-icon name="home" class="ovas"></ion-icon>
+      </ion-button>
+
+
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+
+      <ion-button slot="end" routerLink="/perfil">
+     
+        <ion-icon  color="primary" name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-fab vertical="top" horizontal="end" slot="fixed" color="primary">
+    <ion-fab-button >
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button routerLink="/fincas" color="primary">
+        <ion-icon name="images-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="bottom">
+      <ion-fab-button  routerLink="/mensajes" color="danger">
+        <ion-icon name="mail"></ion-icon>
+      </ion-fab-button>
+    <!-- </ion-fab-list>
+    <ion-fab-list side="start"> -->
+      <ion-fab-button routerLink="/Preferirnos" color="tertiary"> 
+        <ion-icon name="accessibility-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+
+  </ion-fab>
+  <app-estadistica></app-estadistica>
+</ion-content>

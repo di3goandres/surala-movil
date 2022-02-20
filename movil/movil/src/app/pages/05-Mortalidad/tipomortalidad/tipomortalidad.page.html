@@ -1,0 +1,42 @@
+<app-header titulo="Reporte" icon="fish-outline"></app-header>
+
+<ion-content>
+  <ion-card-title class="center">Seleccion Tipo de Reporte</ion-card-title>
+
+  <ion-item detail class="jello-vertical">
+    <ion-card routerLink="/pasarela-mortalidad"> 
+      <ion-card-header>
+        <ion-card-title class="center">Reporte por Mortalidad de Ovas</ion-card-title>
+        <div class="ion-text-center">
+          <img src="./assets/data/mortalidad/mortalidad.jpg">
+        </div>
+      </ion-card-header>
+      <ion-card-content>
+
+        <p class="ion-text-justify blueJustify">
+          La siguiente información nos permite hacer una evaluación de su lote, durante el proceso de incubación y
+          eclosión, para proporcionar una respuesta rápida y una solución apropiada a la situación.
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+  <ion-item detail class="jello-vertical">
+    <ion-card routerLink="/pasarela-conteo">
+      <ion-card-header>
+        <ion-card-title color="primary" class="center">Reporte por Conteo de Ovas</ion-card-title>
+        <div class="ion-text-center">
+          <img src="./assets/data/mortalidad/conteo.jpg" class="center">
+        </div>
+      </ion-card-header>
+      <ion-card-content>
+        <p class="ion-text-justify blueJustify">
+          La siguiente información nos permite hacer un análisis y verificación de la cantidad de ovas entregadas,
+          para proporcionar una respuesta rápida y una solución apropiada a su reclamo.
+        </p>
+
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+  
+
+</ion-content>

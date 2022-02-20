@@ -1,0 +1,26 @@
+<ion-header no-border  class="ion-no-border"  *ngIf="titulo!='Bienvenidos'" [class]="ocultar" >
+  <ion-toolbar >
+
+    <ion-buttons slot="start">
+      <ion-back-button text="" [defaultHref]="ruta" color="primary" (click)="onClick()" *ngIf="ruta=='/'"></ion-back-button>
+      <ion-button (click)="toggleMenu()">
+        <ion-icon slot="icon-only" name="menu" color="primary"></ion-icon>
+      </ion-button>
+      <!-- <ion-button slot="end">
+       
+        <ion-icon  color="primary" [name]="icon"></ion-icon>
+      </ion-button> -->
+    </ion-buttons>
+
+    <ion-title text-capitalize class="ovas"> 
+     {{ titulo }} </ion-title>
+
+     <ion-buttons slot="end" *ngIf="user!=null">
+     
+      <ion-button slot="end" routerLink="/perfil">
+        <!-- <ion-icon name="ellipse"></ion-icon> -->
+        <ion-icon  color="primary" name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
